@@ -1,5 +1,6 @@
 package com.course.praticaljava.rest.service;
 
+import java.util.ArrayList;
 import java.util.Random;
 
 import org.springframework.stereotype.Service;
@@ -23,6 +24,13 @@ public class RandomCarService implements CarService {
 		car.setAvailable(random.nextBoolean());
 		car.setPrice(5000 + random.nextInt(7001));
 		car.setFirstReleaseDate(RandomDateUtil.generateRandomDate());
+
+		var randomNumber = random.nextInt(ADDITIONALFEATURES.size());
+		var additionalFeatures = new ArrayList<String>();
+		for (int i = 1; i <= randomNumber; i++) {
+			additionalFeatures.add(ADDITIONALFEATURES.get(i - 1));
+		}
+		car.setAdditionalFeatures(additionalFeatures);
 
 		return car;
 	}

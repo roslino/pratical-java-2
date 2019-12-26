@@ -10,5 +10,7 @@ public interface CarService {
 	List<String> COLORS = List.of("Red", "Black", "White");
 	List<String> TYPES = List.of("Sedan", "SUV", "MVP");
 
+	List<String> ADDITIONALFEATURES = List.of("GPS", "Alarm", "Sunroof", "Media player", "Leather seats");
+
 	public Car generateCar();
 }
