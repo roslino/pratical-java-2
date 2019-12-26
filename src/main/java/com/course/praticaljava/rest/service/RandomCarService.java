@@ -1,11 +1,10 @@
-package com.course.praticaljava.rest.serviceRandonCarService;
+package com.course.praticaljava.rest.service;
 
 import java.util.Random;
 
 import org.springframework.stereotype.Service;
 
 import com.course.praticaljava.rest.domain.Car;
-import com.course.praticaljava.rest.service.CarService;
 import com.course.praticaljava.util.RandomDateUtil;
 
 @Service
